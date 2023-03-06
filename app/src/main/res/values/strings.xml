@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MyMed-Test_Project</string>
+
+    <string name="txt_phone">Phone</string>
+    <string name="txt_bankId">BankId</string>
+    <string name="txt_send_otp">SEND OTP</string>
+
+
+<!--   Recive Otp Page-->
+    <string name="txt_resent_otp_title">We have sent OTP code to the phone</string>
+    <string name="txt_resend_otp_question">Didn\'t recive OTP?</string>
+    <string name="txt_resend_otp">Resent OTP</string>
+    <string name="txt_sign_in">SIGN IN</string>
+
+
+</resources>

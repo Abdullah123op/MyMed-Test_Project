@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            app:layout_constraintHeight_percent="0.4"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="main_animation.json"
+            app:lottie_loop="false"
+            app:lottie_speed="1" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_transparent"
+            app:layout_constraintBottom_toTopOf="@+id/textView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </View>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtTitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_padding"
+            android:text="Hey there!"
+            android:textColor="@color/myBlack"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/animationView" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtTitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="We are so excited to start this Journey with you"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/txtTitle1"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitle1" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/view_padding"
+            android:background="@drawable/view_positive_background"
+            android:padding="8dp"
+            android:paddingStart="@dimen/padding_start_end"
+            android:paddingEnd="@dimen/padding_start_end"
+            android:text="@string/txt_phone"
+            android:textColor="@color/appColor"
+            app:layout_constraintStart_toStartOf="@+id/txtTitle2"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitle2" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/view_padding"
+            android:background="@drawable/view_negative_background"
+            android:padding="8dp"
+            android:paddingStart="@dimen/padding_start_end"
+            android:paddingEnd="@dimen/padding_start_end"
+            android:text="@string/txt_bankId"
+            app:layout_constraintBottom_toBottomOf="@+id/textView2"
+            app:layout_constraintStart_toEndOf="@+id/textView2"
+            app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/view_padding"
+            android:padding="8dp"
+            android:text="@string/txt_phone"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/etNumber"
+            app:layout_constraintStart_toStartOf="@+id/etNumber"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <EditText
+            android:id="@+id/etNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_padding"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="@dimen/screen_padding"
+            android:background="@drawable/et_negative_background"
+            android:ems="10"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:paddingStart="@dimen/view_padding"
+            android:paddingTop="@dimen/view_padding"
+            android:paddingBottom="@dimen/view_padding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSendOtp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/screen_padding"
+            android:background="@drawable/btn_negative_background"
+            android:ems="10"
+            android:paddingTop="@dimen/view_padding"
+            android:paddingBottom="@dimen/view_padding"
+            android:text="@string/txt_send_otp"
+            android:textColor="#8D434545"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/etNumber"
+            app:layout_constraintStart_toStartOf="@+id/etNumber"
+            app:layout_constraintTop_toBottomOf="@+id/etNumber" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
